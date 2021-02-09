@@ -1,25 +1,42 @@
 <html>
    <head>
-      <title>Deeper Dungeon</title>
+      <title>Mandatory Vaccinator</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
       <div class="header">
-         <h2>Deeper Dungeon</h2>
+         <h2>Mandatory Vaccinator</h2>
       </div>
       <div class="row">
          <div class="column side"></div>
          <div class="column middle">
             <p id="log">
-               Welcome to Deeper Dungeon, a simple JS-based Text Adventure game.
+               Welcome to Mandatory Vaccinator. A covid-19 adventure game.
             </p>
             <input type="text" id="playerInput" placeholder="Enter your commands here.">
+            <button type="button" id="mybtn" onclick="myfun()">Press</button>
          </div>
          <div class="column side"> </div>
       </div>
       <script type="text/javascript" src="rooms.js"></script>
       <script type="text/javascript" src="text.js"></script>
+      <script>
+         function myfun(){
+           var para = document.createElement("p");
+           var nextp = document.createTextNode("add this text");
+           
+           var log = document.getElementById('log');
+           var old = log.textContent;
+           log.textContent = "";
+           var nextpp = document.createTextNode(old);
+           para.appendChild(nextpp);
+           para.appendChild(nextp);
+        
+            log.appendChild(para);
+             
+         }
+      </script>
    </body>
 </html>
